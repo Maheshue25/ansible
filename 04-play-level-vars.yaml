@@ -1,0 +1,12 @@
+- name: Play Level Variables
+  hosts: web
+  vars:
+    movie: Peddi
+    release_date: 4 June 2026
+  tasks:
+  - name: Display movie information
+    ansible.builtin.debug:
+      msg: "The movie {{ movie }} is releasing on {{ release_date }}"
+  - name: Display movie information in uppercase
+    ansible.builtin.debug:  
+      msg: "The movie {{ movie | upper }} is releasing on {{ release_date | upper }}"
