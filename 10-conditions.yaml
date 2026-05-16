@@ -4,8 +4,7 @@
     movie: Peddi
     release_date: 4 June 2026
   tasks:
-    when: movie == "Peddi"
-    then:
-      - name: Display release date if the movie is Peddi
-        ansible.builtin.debug:
-          msg: "The release date of Peddi is {{ release_date }}"
+  - name: Check if the movie is releasing in June
+    ansible.builtin.debug:
+      msg: "The movie {{ movie }} is releasing in June."
+    when: release_date.endswith('June')
