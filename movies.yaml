@@ -1,2 +1,3 @@
-movie: Peddi
-release_date: 4 June 2026
+vars:
+  movie: Peddi
+  release_date: 4 June 2026
