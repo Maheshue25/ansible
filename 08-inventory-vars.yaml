@@ -1,0 +1,7 @@
+- name: Inventory Level Variables
+  hosts: local # This is a special host that refers to the local machine where Ansible is being run.
+  connection: local # This tells Ansible to use a local connection, meaning it will execute tasks on the local machine.
+  tasks:
+  - name: Display inventory level variables 
+    ansible.builtin.debug:
+      msg: "The movie {{ movie }} is releasing on {{ release_date }}"

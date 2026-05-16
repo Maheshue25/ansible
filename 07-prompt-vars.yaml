@@ -1,0 +1,12 @@
+- name: Prompt Level Variables
+  hosts: web
+  vars_prompt:
+    - name: movie
+      prompt: "Enter Movie Name"
+    - name: release_date
+      prompt: "Enter Release Date"
+  tasks:
+  - name: Display movie information
+    ansible.builtin.debug:
+      msg: "Movie {{ movie }} is releasing on {{ release_date }}"
+      

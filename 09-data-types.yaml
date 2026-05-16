@@ -1,0 +1,13 @@
+- name: Data Types in Ansible
+  hosts: web
+  vars:
+    Movie: Peddi
+    Release_Date: 4 June 2026
+    Cast:
+      - Ram charan
+      - Jahnvi Kapoor
+      - Jagapathi Babu
+  tasks:
+  - name: Display different data types
+    ansible.builtin.debug:
+      msg: "The movie {{ Movie }} is releasing on {{ Release_Date }} and the cast includes {{ Cast }}"

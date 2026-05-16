@@ -1,0 +1,8 @@
+- name: File Level Variables
+  hosts: web
+  vars_files:
+    -movies.yaml
+  tasks:
+  - name: Display movie information
+    ansible.builtin.debug:
+      msg: "The movie {{ movie }} is releasing on {{ release_date }}"

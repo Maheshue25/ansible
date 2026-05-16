@@ -1,0 +1,14 @@
+- name: Conditions in Ansible
+  hosts: web
+  vars:
+    movie: Peddi
+    release_date: 4 June 2026
+  tasks:
+  - name: Check if the name of the movie is Peddi
+    ansible.builtin.debug:
+      msg: "The movie is Peddi"
+    when: movie == "Peddi"
+    then:
+      - name: Display release date if the movie is Peddi
+        ansible.builtin.debug:
+          msg: "The release date of Peddi is {{ release_date }}"
