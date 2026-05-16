@@ -1,5 +1,6 @@
 - name: File Level Variables
-  hosts: web
+  hosts: local
+  connection: local
   vars_files:
     -movies.yaml
   tasks:
